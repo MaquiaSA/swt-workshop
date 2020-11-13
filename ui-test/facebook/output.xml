@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201107 23:06:09.772" rpa="false">
+<suite id="s1" name="Fb-G1" source="D:\Work\vv\swt-workshop\ui-test\facebook\fb-g1.robot">
+<test id="s1-t1" name="Test search keyword and verify result on Google">
+<kw name="พิมพ์ facebook.com">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver.chrome.options'].Options()</arg>
+<arg>sys</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20201107 23:06:09.965" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000160BB504A00&gt;</msg>
+<status status="PASS" starttime="20201107 23:06:09.965" endtime="20201107 23:06:09.965"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+</arguments>
+<status status="PASS" starttime="20201107 23:06:09.965" endtime="20201107 23:06:09.965"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.facebook.com</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+</arguments>
+<msg timestamp="20201107 23:06:09.966" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com'.</msg>
+<status status="PASS" starttime="20201107 23:06:09.965" endtime="20201107 23:06:13.763"></status>
+</kw>
+<status status="PASS" starttime="20201107 23:06:09.964" endtime="20201107 23:06:13.764"></status>
+</kw>
+<kw name="ใส่ Email หรือ เบอร์โทร">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>email</arg>
+<arg>0814573606</arg>
+</arguments>
+<msg timestamp="20201107 23:06:13.765" level="INFO">Typing text '0814573606' into text field 'email'.</msg>
+<status status="PASS" starttime="20201107 23:06:13.765" endtime="20201107 23:06:14.859"></status>
+</kw>
+<status status="PASS" starttime="20201107 23:06:13.764" endtime="20201107 23:06:14.859"></status>
+</kw>
+<kw name="ใส่ Password">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>pass</arg>
+<arg>anant31560</arg>
+</arguments>
+<msg timestamp="20201107 23:06:14.860" level="INFO">Typing text 'anant31560' into text field 'pass'.</msg>
+<status status="PASS" starttime="20201107 23:06:14.860" endtime="20201107 23:06:15.025"></status>
+</kw>
+<status status="PASS" starttime="20201107 23:06:14.860" endtime="20201107 23:06:15.025"></status>
+</kw>
+<kw name="กด Enter">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>pass</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20201107 23:06:15.027" level="INFO">Sending key(s) ('RETURN',) to pass element.</msg>
+<msg timestamp="20201107 23:06:15.310" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20201107 23:06:15.310" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20201107 23:06:15.026" endtime="20201107 23:06:15.345"></status>
+</kw>
+<status status="PASS" starttime="20201107 23:06:15.026" endtime="20201107 23:06:15.345"></status>
+</kw>
+<kw name="ตรวจสอบชื่อ User">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Bokuno Shinzou</arg>
+</arguments>
+<msg timestamp="20201107 23:06:17.829" level="INFO">Current page contains text 'Bokuno Shinzou'.</msg>
+<status status="PASS" starttime="20201107 23:06:15.346" endtime="20201107 23:06:17.829"></status>
+</kw>
+<status status="PASS" starttime="20201107 23:06:15.345" endtime="20201107 23:06:17.830"></status>
+</kw>
+<kw name="ไปที่หน้าแรก">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath://*[@id="mount_0_0"]/div/div[1]/div[1]/div[2]/div[3]/div/div[1]/div[1]/ul/li[1]/span/div/a</arg>
+</arguments>
+<status status="PASS" starttime="20201107 23:06:17.830" endtime="20201107 23:06:18.257"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="mount_0_0"]/div/div[1]/div[1]/div[2]/div[3]/div/div[1]/div[1]/ul/li[1]/span/div/a</arg>
+</arguments>
+<msg timestamp="20201107 23:06:18.258" level="INFO">Clicking element 'xpath://*[@id="mount_0_0"]/div/div[1]/div[1]/div[2]/div[3]/div/div[1]/div[1]/ul/li[1]/span/div/a'.</msg>
+<status status="PASS" starttime="20201107 23:06:18.258" endtime="20201107 23:06:18.678"></status>
+</kw>
+<status status="PASS" starttime="20201107 23:06:17.830" endtime="20201107 23:06:18.678"></status>
+</kw>
+<kw name="กดช่องโพสต์ข้อความ">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath://*[@id="mount_0_0"]/div/div[1]/div[1]/div[3]/div/div/div[1]/div[1]/div/div[2]/div/div/div[3]/div/div[2]/div/div/div/div[1]/div/div[1]/span</arg>
+</arguments>
+<status status="PASS" starttime="20201107 23:06:18.679" endtime="20201107 23:06:19.930"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="mount_0_0"]/div/div[1]/div[1]/div[3]/div/div/div[1]/div[1]/div/div[2]/div/div/div[3]/div/div[2]/div/div/div/div[1]/div/div[1]/span</arg>
+</arguments>
+<msg timestamp="20201107 23:06:19.930" level="INFO">Clicking element 'xpath://*[@id="mount_0_0"]/div/div[1]/div[1]/div[3]/div/div/div[1]/div[1]/div/div[2]/div/div/div[3]/div/div[2]/div/div/div/div[1]/div/div[1]/span'.</msg>
+<status status="PASS" starttime="20201107 23:06:19.930" endtime="20201107 23:06:20.076"></status>
+</kw>
+<status status="PASS" starttime="20201107 23:06:18.678" endtime="20201107 23:06:20.076"></status>
+</kw>
+<kw name="ใส่ข้อความ &quot;สวัสดี Robot Framework&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>เพิ่มลงในโพสต์ของคุณ</arg>
+</arguments>
+<status status="PASS" starttime="20201107 23:06:20.077" endtime="20201107 23:06:20.835"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>สวัสดี Robot Framework</arg>
+</arguments>
+<msg timestamp="20201107 23:06:20.835" level="INFO">Sending key(s) ('สวัสดี Robot Framework',) to page.</msg>
+<msg timestamp="20201107 23:06:20.835" level="INFO">Sending keys สวัสดี Robot Framework</msg>
+<status status="PASS" starttime="20201107 23:06:20.835" endtime="20201107 23:06:21.287"></status>
+</kw>
+<status status="PASS" starttime="20201107 23:06:20.077" endtime="20201107 23:06:21.288"></status>
+</kw>
+<status status="PASS" starttime="20201107 23:06:09.963" endtime="20201107 23:06:21.288" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201107 23:06:09.774" endtime="20201107 23:06:21.290"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Fb-G1">Fb-G1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
